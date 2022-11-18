@@ -22,10 +22,10 @@ jobs:
           npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
-      - name: publish bundleme
+      - name: publish @thorstensuckow/bundleme
         run: |
           npm i -g change-package-name
-          npx change-package-name bundleme
+          npx change-package-name @thorstensuckow/bundleme
           npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
