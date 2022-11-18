@@ -5,9 +5,9 @@ import l8 from "@l8js/l8";
 import { fileURLToPath } from "url";
 
 const
-    cwd = fs.d fileURLToPath(new URL("../", import.meta.url)),
+    cwd = fileURLToPath(new URL("../", import.meta.url)),
     pkg = fs.readJsonSync(`${cwd}/package.json`),
-    packageName = pkg.sencha.name || "[package name not found]",
+    packageName = pkg.sencha?.name || "[package name not found]",
     buildDir = `${cwd}/build`,
     deployDir = `${buildDir}/deploy`,
     files = [
