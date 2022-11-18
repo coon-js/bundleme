@@ -1,0 +1,47 @@
+{
+  "name": "@coon-js/bundleme",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "bundleme": "bundleme",
+    "release": "standard-version",
+    "release:patch": "standard-version --release-as patch && npm run postversion",
+    "release:minor": "standard-version --release-as minor && npm run postversion",
+    "release:major": "standard-version --release-as major && npm run postversion",
+    "postversion": "git push && git push --tags"
+  },
+  "bin": "bin/bin.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coon-js/bundleme.git"
+  },
+  "keywords": [
+    "sencha",
+    "coon.js",
+    "coon-js",
+    "l8.js",
+    "l8js",
+    "l8",
+    "javascript",
+  ],
+  "author": "Thorsten Suckow-Homberg <thorsten@suckow-homberg.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coon-js/bundleme/issues"
+  },
+  "homepage": "https://github.com/coon-js/bundleme#readme",
+  "dependencies": {
+    "@l8js/l8": "^0.7.4",
+    "fs-extra": "^10.1.0",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "@commitlint/cli": "^13.2.0",
+    "@commitlint/config-conventional": "^13.2.0",
+    "standard-version": "^9.3.1"
+  },
+  "engines": {
+    "node": ">=16.14"
+  }
+}
