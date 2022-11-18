@@ -14,7 +14,7 @@ const
     files = [
         [`${packageRoot}/package.json`, `${deployDir}/package.json`],
         `${buildDir}/${packageName}.js`,
-        `${buildDir}/${packageName}.css`,
+        [`${buildDir}/resources/${packageName}-all.css`, `${deployDir}/${packageName}.css`],
         [`${buildDir}/resources/${packageName}.conf.json`, `${deployDir}/${packageName}.conf.json`],
         [`${buildDir}/resources/css-vars.js`, `${deployDir}/css-vars.js`]
     ];
